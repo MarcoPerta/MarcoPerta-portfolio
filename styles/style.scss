@@ -65,18 +65,26 @@ section{
 .sec2{
     display: none;
     transform: translate(0) scale(1);
+    background-color: red;
 }
 .sec3{
     display: none;
     transform: translate(0) scale(1);
+    background-color: green;
 }
 .sec4{
     display: none;
     transform: translate(0) scale(1);
+    background-color: black;
 }
 .sec5{
     display: none;
     transform: translate(0) scale(1);
+    background-color: yellow;
+}
+
+.active{
+    display: block;
 }
 
 .controls{
