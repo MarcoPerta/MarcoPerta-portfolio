@@ -32,7 +32,7 @@ function PageTransition(){
             element.classList.add('active');
 
         }
-    })
+    }) 
 }
 
 PageTransition();
