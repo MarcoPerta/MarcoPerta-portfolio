@@ -2,6 +2,9 @@ const sections = document.querySelectorAll('.section');
 const sectBtns = document.querySelectorAll('.controls');
 const sectBtn = document.querySelectorAll('.control');
 const allSection = document.querySelector('.main-content');
+const button = document.querySelector('.main-btn');
+const buttonText = document.querySelector('.btn-text');
+const buttonIcon = document.querySelector('.btn-icon');
 
 
 function PageTransition(){
@@ -33,6 +36,12 @@ function PageTransition(){
 
         }
     }) 
+    
+    if (button.closest("#home") !== null) {
+      buttonText.style.zIndex = '0';
+      buttonIcon.style.zIndex = '0';
+    }
+
 }
 
 PageTransition();
