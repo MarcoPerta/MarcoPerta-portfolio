@@ -2,8 +2,8 @@
   header {
     padding: 0 !important;
   }
-  section {
-    padding: 0rem;
+  .section {
+    padding: 0rem !important;
   }
   .theme-btn {
     width: 50px;
