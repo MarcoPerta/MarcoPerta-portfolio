@@ -5,6 +5,11 @@ const allSection = document.querySelector('.main-content');
 const button = document.querySelector('.main-btn');
 const buttonText = document.querySelector('.btn-text');
 const buttonIcon = document.querySelector('.btn-icon');
+const contactForm = document.querySelector('#contact-form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const subjectInput = document.querySelector('#subject');
+const messageInput = document.querySelector('#message');
 
 
 function PageTransition(){
@@ -41,6 +46,34 @@ function PageTransition(){
       buttonText.style.zIndex = '0';
       buttonIcon.style.zIndex = '0';
     }
+
+    // Invio email
+  
+  function sendEmail(event) {
+    event.preventDefault();
+    
+    // Check if all required fields are filled out
+    if (!nameInput.value || !emailInput.value || !subjectInput.value || !messageInput.value) {
+      alert('Please fill out all required fields');
+      return;
+    }
+    
+    const body = `Name: ${nameInput.value}\nEmail: ${emailInput.value}\n\nMessage:\n${messageInput.value}`;
+    
+    // Create a mailto: link
+    const mailto = `mailto:perta.marco@icloud.com?subject=${encodeURIComponent(subjectInput.value)}&body=${encodeURIComponent(body)}`;
+    
+    // Open the link in a new tab
+    window.open(mailto);
+    
+    // Clear the form inputs
+    nameInput.value = '';
+    emailInput.value = '';
+    subjectInput.value = '';
+    messageInput.value = '';
+  }
+  
+  contactForm.addEventListener('submit', sendEmail);
 
 }
 
