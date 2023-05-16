@@ -249,7 +249,6 @@ a {
 header {
   height: 100vh;
   color: var(--color-white);
-  overflow: hidden;
 }
 
 section {
@@ -345,16 +344,6 @@ section {
   display: flex;
   align-items: center;
   position: relative;
-}
-.header-content .left-header .h-shape {
-  transition: all 0.4s ease-in-out;
-  width: 65%;
-  height: 100%;
-  background-color: var(--color-secondary);
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
 }
 .header-content .left-header .image {
   border-radius: var(--br-sm-2);
